@@ -16,7 +16,9 @@ import {
   PageIcon,
   PieChartIcon,
   PlugInIcon,
+  PaperPlaneIcon,
 } from "../icons/index";
+import { AxeIcon } from "lucide-react";
 
 type NavItem = {
   name: string;
@@ -58,14 +60,39 @@ const navItems: NavItem[] = [
     visibleTo: "both",
   },
   {
-    icon: <PlugInIcon />,
-    name: "Developer Settings",
-    visibleTo: "admin",
-    subItems: [
-      { name: "API Document", path: "/developer/api-document" },
-      { name: "Credentials", path: "/developer/credentials" },
-    ],
+    icon: <PaperPlaneIcon />,
+    name: "Qr Management",
+    path: "/qr",
+     visibleTo: "user",
   },
+  {
+    icon: <TableIcon/>,
+    name: "Virtual Account Management",
+    path: "/virtual-account",
+    visibleTo: "user",
+  },
+  {
+    icon: <BoxCubeIcon/>,
+    name: "Move to Bank",
+    path: "/move-to-bank",
+     visibleTo: "user",
+  },
+  {
+    icon: <AxeIcon/>,
+    name: "My Bank Account",
+    path: "/my-bank-account",
+     visibleTo: "user",
+  },
+
+  // {
+  //   icon: <PlugInIcon />,
+  //   name: "Developer Settings",
+  //   visibleTo: "admin",
+  //   subItems: [
+  //     { name: "API Document", path: "/developer/api-document" },
+  //     { name: "Credentials", path: "/developer/credentials" },
+  //   ],
+  // },
 ];
 
 const AppSidebar: React.FC = () => {

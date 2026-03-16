@@ -37,6 +37,10 @@ export const RoutesLink = {
   transactions:'/transactions',
   apidocs: "/developer/api-document",
   credentials: "/developer/credentials",
+  virtualAccount:"/virtual-account",
+  MoveToBank:"/move-to-bank",
+  MyBankAccount:'/my-bank-account',
+
 } as const;
 
 // 2. Define Public Routes (No login required)
@@ -73,8 +77,7 @@ const routePermissions: Record<string, string[]> = {
   
   // User Only Access (Example)
   [RoutesLink.recipients]: USER,
-  [RoutesLink.qr]: USER,
-
+  
   // UI Kit / Dev Routes (Usually Admin only)
   [RoutesLink.basicTables]: ADMIN,
   [RoutesLink.formElements]: ADMIN,
@@ -92,6 +95,10 @@ const routePermissions: Record<string, string[]> = {
   [RoutesLink.transactions]: BOTH,
   [RoutesLink.apidocs]: ADMIN,
   [RoutesLink.credentials]: ADMIN,
+  [RoutesLink.qr]: USER,
+  [RoutesLink.virtualAccount]: USER,
+  [RoutesLink.MoveToBank]: USER,
+  [RoutesLink.MyBankAccount]: USER,
 };
 
 // 4. Export logic to be used by your Middleware or Router
