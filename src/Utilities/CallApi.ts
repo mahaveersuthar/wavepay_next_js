@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import { getCachedLocation, resolveLocation } from "./LocationResolver";
 
 
-export const API_BASE_URL = "https://api.payoutapi.in/api/";
+export const API_BASE_URL = "https://apiwavepay.pinepe.in/";
 
 interface ApiOptions {
   method?: "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
